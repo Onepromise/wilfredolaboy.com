@@ -342,6 +342,7 @@ html[data-theme="ronin"] .hero h1 { letter-spacing: 0.06em; }
 }
 
 /* ============ SPLASH: choose your path ============ */
+.splash[hidden] { display: none; }
 .splash {
   position: relative;
   display: grid;

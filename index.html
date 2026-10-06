@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="professional">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wilfredo Laboy — Choose your path</title>
+<meta name="description" content="Wilfredo Laboy: DevOps engineer and systems administrator by day, game developer and creator behind Ronin Forge by night.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Shippori+Mincho+B1:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- full-screen wipe used during transitions -->
+<div class="wipe" id="wipe" aria-hidden="true"></div>
+
+<header class="nav">
+  <a class="brand" href="#splash" id="brandHome">
+    <span class="brand-mark" aria-hidden="true"></span>
+    <span class="brand-name">Wilfredo Laboy</span>
+  </a>
+
+  <!-- the two-sides toggle -->
+  <div class="side-toggle" role="tablist" aria-label="Choose a side">
+    <button class="side-btn is-active" data-side="professional" role="tab" aria-selected="true">
+      <span class="side-btn-label">The Professional</span>
+    </button>
+    <button class="side-btn" data-side="ronin" role="tab" aria-selected="false">
+      <span class="side-btn-label">Ronin Forge</span>
+    </button>
+    <span class="side-pill" aria-hidden="true"></span>
+  </div>
+
+  <a class="nav-cta" href="#contact">Contact</a>
+</header>
+
+<main id="top">
+
+  <!-- ============ SPLASH: choose your path ============ -->
+  <section class="splash" id="splash" aria-label="Choose your path">
+    <p class="splash-hint">Choose your path</p>
+
+    <div class="splash-side splash-pro" data-enter="professional" tabindex="0" role="button" aria-label="Enter the professional side">
+      <div class="splash-content">
+        <p class="eyebrow">Wilfredo Laboy</p>
+        <h2>The<br>Professional</h2>
+        <p class="splash-lede">Engineer. Builder. Storyteller.</p>
+        <span class="btn btn-primary">Enter <span aria-hidden="true">→</span></span>
+      </div>
+    </div>
+
+    <div class="splash-side splash-ronin" data-enter="ronin" tabindex="0" role="button" aria-label="Enter Ronin Forge">
+      <div class="splash-content">
+        <p class="eyebrow eyebrow-jp"><span class="jp" lang="ja">浪人</span> · Ronin</p>
+        <h2 class="ronin-title">RONIN<br>FORGE</h2>
+        <p class="splash-lede">Forge your own path.</p>
+        <span class="btn btn-primary"><span aria-hidden="true">←</span> Enter</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- everything below the splash lives "inside" a chosen side -->
+  <div id="inside" hidden>
+
+  <!-- ============ PROFESSIONAL SIDE ============ -->
+  <div class="view view-professional is-visible" data-view="professional">
+
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="eyebrow">Wilfredo Laboy</p>
+        <h1>Engineer.<br>Builder.<br><span class="accent">Storyteller.</span></h1>
+        <p class="lede">DevOps engineer and systems administrator. I keep infrastructure reliable by day — and build worlds by night.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">Get in touch</a>
+          <a class="btn btn-ghost side-switch" href="#" data-side="ronin">Enter the Forge →</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img src="assets/hero-professional.webp" alt="A calm, minimal workspace with a laptop at dawn">
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <p class="eyebrow">About</p>
+        <h2>Fourteen-plus years keeping systems running.</h2>
+        <p class="prose">My background is endpoint engineering and systems administration — macOS device management at fleet scale, MDM, and Apple device lifecycle work. These days my focus has shifted toward DevOps and systems administration: automation, Linux infrastructure, and making complex systems boring and reliable. I bring an operator's discipline to everything I build, including games.</p>
+        <p class="note">Currently contracting — details available on request. This page stays employer-agnostic on purpose.</p>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="wrap">
+        <p class="eyebrow">Specialties</p>
+        <h2>What I do</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>DevOps &amp; Automation</h3>
+            <p>CI/CD pipelines, infrastructure as code, and automation that removes toil instead of adding it.</p>
+          </article>
+          <article class="card">
+            <h3>Systems Administration</h3>
+            <p>Linux servers, networking, and homelab-grade infrastructure — designed, secured, and documented.</p>
+          </article>
+          <article class="card">
+            <h3>Endpoint Management</h3>
+            <p>14+ years of macOS device management at scale: MDM, fleet provisioning, and lifecycle strategy.</p>
+          </article>
+          <article class="card">
+            <h3>Apple Ecosystem</h3>
+            <p>Apple Business Manager integration, device lifecycle planning, and endpoint consulting.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <p class="eyebrow">Field notes</p>
+        <h2>Writing, eventually.</h2>
+        <p class="prose">Occasional notes on infrastructure, automation, and the craft of keeping things running. No schedule, no noise.</p>
+        <div class="cards">
+          <article class="card post-card">
+            <p class="quest-tag">Coming soon</p>
+            <h3>What 14 years of MDM taught me about automation</h3>
+            <p>Fleet-scale device management is DevOps with stricter parents.</p>
+          </article>
+          <article class="card post-card">
+            <p class="quest-tag">Coming soon</p>
+            <h3>Runbooks are love letters to your future self</h3>
+            <p>Documentation that actually gets read at 3 AM.</p>
+          </article>
+          <article class="card post-card">
+            <p class="quest-tag">Coming soon</p>
+            <h3>Homelab diaries: quiet infrastructure</h3>
+            <p>Building a rack you can live with — literally.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /professional view -->
+
+  <!-- ============ RONIN FORGE SIDE ============ -->
+  <div class="view view-ronin" data-view="ronin" hidden>
+
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="eyebrow eyebrow-jp"><span class="jp" lang="ja">浪人</span> · Ronin</p>
+        <h1 class="ronin-title">RONIN<br>FORGE<span class="accent">.</span></h1>
+        <p class="lede">A masterless builder forging games, stories, and worlds. No lord — no quest log but my own.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">Join the party</a>
+          <a class="btn btn-ghost side-switch" href="#" data-side="professional">← Back to business</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img src="assets/hero-ronin.webp" alt="A lone samurai before a crimson moon">
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <p class="eyebrow"><span class="jp" lang="ja">物語</span> · The tale</p>
+        <h2>By day, I keep servers alive.<br>By night, I build worlds.</h2>
+        <p class="prose">Ronin Forge is where my game development lives — solo builds, devlogs, and the long grind of learning in public. I play Final Fantasy XIV, World of Warcraft, and Minecraft, and I make games inspired by the ones that raised me.</p>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="wrap">
+        <p class="eyebrow"><span class="jp" lang="ja">鍛錬</span> · In the forge</p>
+        <h2>Current quests</h2>
+        <div class="cards">
+          <article class="card quest">
+            <p class="quest-tag">Unity · 3D · MMO</p>
+            <h3>Meadow Bound</h3>
+            <p>A small 3D multiplayer world in Unity. Local server first — the cloud can wait until the forge is hot. Built with Synty assets, code by me, art direction by my partner Ashley.</p>
+          </article>
+          <article class="card quest">
+            <p class="quest-tag">Unreal Engine · with RKS</p>
+            <h3>Room 303</h3>
+            <p>An Unreal Engine project built with the RKS crew. Systems-heavy, experimental, and very much alive.</p>
+          </article>
+          <article class="card quest">
+            <p class="quest-tag">YouTube</p>
+            <h3>Devlog &amp; channels</h3>
+            <p>Four channels and counting — Final Fantasy XIV, World of Warcraft, Minecraft, and a GameDev devlog following every build, bug, and breakthrough.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <p class="eyebrow"><span class="jp" lang="ja">記録</span> · Devlog</p>
+        <h2>From the forge floor.</h2>
+        <p class="prose">Build logs in video form — no extra writing required. New episodes land on the GameDev channel.</p>
+        <div class="cards">
+          <!-- TODO: swap these hrefs for your real devlog video/playlist URLs -->
+          <a class="card post-card post-link" href="https://www.youtube.com/" target="_blank" rel="noopener">
+            <p class="quest-tag">Devlog</p>
+            <h3>Meadow Bound Devlog #1 — Why I killed the 2D build</h3>
+            <p>The pivot to 3D, Synty assets, and starting over without throwing everything away.</p>
+            <span class="post-cta">Watch <span aria-hidden="true">→</span></span>
+          </a>
+          <a class="card post-card post-link" href="https://www.youtube.com/" target="_blank" rel="noopener">
+            <p class="quest-tag">Devlog</p>
+            <h3>Meadow Bound Devlog #2 — Local server, first light</h3>
+            <p>Standing up the Ubuntu box and getting two players into the same meadow.</p>
+            <span class="post-cta">Watch <span aria-hidden="true">→</span></span>
+          </a>
+          <a class="card post-card post-link" href="https://www.youtube.com/" target="_blank" rel="noopener">
+            <p class="quest-tag">Devlog</p>
+            <h3>Room 303 — Systems from scratch</h3>
+            <p>Building with the RKS crew in Unreal: what we're learning.</p>
+            <span class="post-cta">Watch <span aria-hidden="true">→</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /ronin view -->
+
+  <!-- ============ CONTACT (shared, re-themes) ============ -->
+  <section class="section contact" id="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2>Send a raven.</h2>
+        <p class="prose">Consulting, collaboration, or just talking shop about games and infrastructure — my inbox is open.</p>
+        <p class="email-line">Prefer email? <a class="email-link" href="mailto:wilfredo@wilfredolaboy.com">wilfredo@wilfredolaboy.com</a></p>
+        <div class="socials">
+          <a href="https://www.youtube.com" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://instagram.com/roninforge_" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+      <!--
+        CONTACT FORM WIRING
+        This is a static site, so the form posts to Formspree (free tier works fine).
+        1. Create a free account at https://formspree.io and make a form.
+        2. Replace YOUR_FORM_ID below with your form's ID.
+        Until then, the page shows a friendly notice and points visitors at the email link.
+      -->
+      <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" required autocomplete="name" placeholder="Your name">
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" required autocomplete="email" placeholder="you@example.com">
+        </label>
+        <label>
+          <span>Message</span>
+          <textarea name="message" rows="5" required placeholder="What's on your mind?"></textarea>
+        </label>
+        <button class="btn btn-primary" type="submit">Send message</button>
+        <p class="form-note" id="formNote" hidden>Heads up: the form isn't connected yet — email me directly at <a href="mailto:wilfredo@wilfredolaboy.com">wilfredo@wilfredolaboy.com</a>.</p>
+      </form>
+    </div>
+  </section>
+
+  </div><!-- /inside -->
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <p>© 2026 Wilfredo Laboy · <span class="jp" lang="ja">浪人</span> Ronin Forge</p>
+    <p class="footer-sub">Engineer. Builder. Storyteller.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

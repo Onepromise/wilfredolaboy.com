@@ -121,13 +121,6 @@
     });
   });
 
-  document.querySelectorAll(".side-switch").forEach(function (a) {
-    a.addEventListener("click", function (e) {
-      e.preventDefault();
-      switchSide(a.getAttribute("data-side"));
-    });
-  });
-
   brandHome.addEventListener("click", function (e) {
     e.preventDefault();
     goHome();

@@ -127,15 +127,17 @@ html[data-theme="ronin"] .brand-mark { border-radius: 50% 50% 50% 4px; transform
 .side-btn {
   position: relative;
   z-index: 1;
+  flex: 1;
   border: 0;
   background: transparent;
   color: var(--muted);
   font: 600 0.82rem var(--font-body);
-  padding: 9px 18px;
+  padding: 10px 22px;
   border-radius: 999px;
   cursor: pointer;
   transition: color 0.3s;
   white-space: nowrap;
+  text-align: center;
 }
 .side-btn.is-active { color: var(--accent-ink); }
 .side-pill {

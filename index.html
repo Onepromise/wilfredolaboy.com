@@ -7,7 +7,7 @@
 <meta name="description" content="Wilfredo Laboy — DevOps engineer and systems administrator. Fourteen-plus years keeping systems running; by night, forging games and add-ons at Crescent Cove.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -28,7 +28,7 @@
 
   <nav class="nav-links" id="navLinks" aria-label="Primary">
     <a href="#work">Work</a>
-    <a href="#writing">Writing</a>
+    
     <a href="#about">About</a>
     <a href="#contact" class="nav-cta">Contact</a>
   </nav>
@@ -97,34 +97,8 @@
     <div class="wrap">
       <div class="flash">
         <h2>The <span class="ember-text">Forge</span> current</h2>
-        <p>Indie game dev, WoW &amp; FFXIV add-ons, creator tools — Forge's Ledger, Meadow Bound, and everything in the works, built with my crew at our studio. The split lives across the two domains now, not inside this page.</p>
+        <p>Indie game dev, WoW add-ons, and creator tools — Forge's Ledger, Meadow Bound, and everything in the works, built with my crew at our studio. The split lives across the two domains now, not inside this page.</p>
         <a class="btn btn-ember" href="https://thecrescentcove.com">Enter the Cove <span aria-hidden="true">→</span></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ WRITING ============ -->
-  <section class="section section-alt" id="writing">
-    <div class="wrap">
-      <p class="eyebrow">Field notes</p>
-      <h2>Writing, eventually.</h2>
-      <p class="prose">Occasional notes on infrastructure, automation, and the craft of keeping things running. No schedule, no noise.</p>
-      <div class="cards">
-        <article class="card post-card">
-          <p class="quest-tag">Coming soon</p>
-          <h3>What 14 years of MDM taught me about automation</h3>
-          <p>Fleet-scale device management is DevOps with stricter parents.</p>
-        </article>
-        <article class="card post-card">
-          <p class="quest-tag">Coming soon</p>
-          <h3>Runbooks are love letters to your future self</h3>
-          <p>Documentation that actually gets read at 3 AM.</p>
-        </article>
-        <article class="card post-card">
-          <p class="quest-tag">Coming soon</p>
-          <h3>Homelab diaries: quiet infrastructure</h3>
-          <p>Building a rack you can live with — literally.</p>
-        </article>
       </div>
     </div>
   </section>
@@ -136,37 +110,15 @@
         <p class="eyebrow">Contact</p>
         <h2>Send a raven.</h2>
         <p class="prose">Consulting, collaboration, or just talking shop about games and infrastructure — my inbox is open.</p>
-        <p class="email-line">Prefer email? <a class="email-link" href="mailto:wilfredo@thecrescentcove.com">wilfredo@thecrescentcove.com</a></p>
+        <a class="email-link" href="mailto:wilfredo@thecrescentcove.com">wilfredo@thecrescentcove.com</a>
         <div class="socials">
           <a href="https://www.youtube.com/@RoninForge-pro" target="_blank" rel="noopener">YouTube</a>
           <a href="https://github.com/Onepromise" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/wilfredo-laboy-07320650" target="_blank" rel="noopener">LinkedIn</a>
           <a href="https://instagram.com/roninforge_" target="_blank" rel="noopener">Instagram</a>
         </div>
       </div>
-      <!--
-        CONTACT FORM WIRING
-        This is a static site, so the form posts to Formspree (free tier works fine).
-        1. Create a free account at https://formspree.io and make a form.
-        2. Replace YOUR_FORM_ID below with your form's ID.
-        Until then, the page shows a friendly notice and points visitors at the email link.
-      -->
-      <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <label>
-          <span>Name</span>
-          <input type="text" name="name" required autocomplete="name" placeholder="Your name">
-        </label>
-        <label>
-          <span>Email</span>
-          <input type="email" name="email" required autocomplete="email" placeholder="you@example.com">
-        </label>
-        <label>
-          <span>Message</span>
-          <textarea name="message" rows="5" required placeholder="What's on your mind?"></textarea>
-        </label>
-        <button class="btn btn-primary" type="submit">Send message</button>
-        <p class="form-note" id="formNote" hidden>Heads up: the form isn't connected yet — email me directly at <a href="mailto:wilfredo@thecrescentcove.com">wilfredo@thecrescentcove.com</a>.</p>
-      </form>
+      
     </div>
   </section>
 

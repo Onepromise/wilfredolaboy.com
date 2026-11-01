@@ -1,136 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wilfredo Laboy — Engineer by day. Forge by night.</title>
-<meta name="description" content="Wilfredo Laboy — DevOps engineer and systems administrator. Fourteen-plus years keeping systems running; by night, forging games and add-ons at Crescent Cove.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wilfredo Laboy · Head of Infrastructure &amp; Security</title>
+<meta name="description" content="Wilfredo Laboy is a systems engineer who builds and secures the cloud foundations behind AI products: AWS infrastructure, identity and access, CI/CD and compliance.">
+<style>
+  :root {
+    --ivory: #EEE4D3;
+    --ivory-card: #F5EDDD;
+    --ink: #032111;
+    --teal: #00A5A8;
+    --teal-dark: #00787B;
+    --white: #FFFFFF;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', Helvetica, Arial, sans-serif; background: var(--ivory); color: var(--ink); line-height: 1.6; }
+  a { color: var(--teal-dark); }
+  .wrap { max-width: 1060px; margin: 0 auto; padding: 0 56px; }
+  @media (max-width: 720px) { .wrap { padding: 0 24px; } }
+
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 26px 0; }
+  .logo { font-weight: 800; letter-spacing: .14em; font-size: 15px; }
+  .logo span { color: var(--teal); }
+  .navlinks { font-size: 13.5px; letter-spacing: .08em; opacity: .85; }
+  .navlinks a { color: var(--ink); text-decoration: none; margin-left: 18px; }
+  .navlinks a:hover { color: var(--teal-dark); }
+
+  .hero { padding: 72px 0 10px; }
+  .kicker { color: var(--teal-dark); letter-spacing: .32em; font-size: 13px; font-weight: 700; text-transform: uppercase; }
+  h1 { font-size: 58px; line-height: 1.05; margin: 20px 0 6px; font-weight: 800; }
+  h1 .thin { font-weight: 300; }
+  @media (max-width: 720px) { h1 { font-size: 40px; } }
+  .role { font-size: 24px; font-weight: 600; margin-top: 12px; }
+  .role .at { color: var(--teal-dark); }
+  .role-meta { font-size: 15px; opacity: .75; margin-top: 4px; }
+  .lede { font-size: 19px; line-height: 1.55; opacity: .9; max-width: 680px; margin-top: 22px; }
+  .cta { margin-top: 34px; }
+  .btn { display: inline-block; padding: 13px 26px; border-radius: 8px; background: var(--teal); color: var(--white); font-weight: 700; font-size: 15px; margin-right: 14px; text-decoration: none; }
+  .btn.ghost { background: transparent; color: var(--ink); border: 1.5px solid var(--ink); }
+
+  section { padding: 46px 0 6px; }
+  h2 { font-size: 15px; letter-spacing: .28em; text-transform: uppercase; color: var(--teal-dark); margin-bottom: 22px; }
+  h2::after { content: ""; display: block; width: 54px; height: 3px; background: var(--teal); margin-top: 10px; border-radius: 2px; }
+  .prose { max-width: 760px; font-size: 17px; }
+  .prose p + p { margin-top: 16px; }
+
+  .cards { display: flex; gap: 20px; flex-wrap: wrap; }
+  .card { flex: 1 1 300px; border: 1.5px solid var(--ink); border-radius: 14px; padding: 24px; background: var(--ivory-card); }
+  .card h3 { color: var(--teal-dark); font-size: 17px; margin-bottom: 10px; }
+  .card ul { list-style: none; }
+  .card li { font-size: 14.5px; line-height: 1.55; opacity: .9; padding-left: 16px; position: relative; margin-bottom: 8px; }
+  .card li::before { content: "•"; color: var(--teal); position: absolute; left: 0; font-weight: 700; }
+  .card .when { display: inline-block; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; border: 1px solid var(--teal); color: var(--teal-dark); border-radius: 999px; padding: 2px 10px; margin-bottom: 12px; }
+
+  .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+  .skill { background: var(--ivory-card); border: 1.5px solid var(--ink); border-radius: 14px; padding: 22px 24px; }
+  .skill h3 { font-size: 15px; letter-spacing: .06em; text-transform: uppercase; color: var(--teal-dark); margin-bottom: 8px; }
+  .skill p { font-size: 15px; opacity: .9; }
+
+  .band { background: var(--ink); color: var(--ivory); border-radius: 18px; padding: 40px 44px; margin-top: 14px; }
+  .band h2 { color: var(--teal); }
+  .band ol { margin-left: 22px; max-width: 760px; }
+  .band li { font-size: 16.5px; margin-bottom: 10px; }
+
+
+  .foot { padding: 54px 0 44px; font-size: 13px; opacity: .65; letter-spacing: .05em; }
+</style>
 </head>
 <body>
 
-<a class="skip" href="#top">Skip to content</a>
-
-<header class="nav">
-  <a class="brand" href="#top">
-    <span class="brand-mark" aria-hidden="true"></span>
-    <span class="brand-name">W. Laboy</span>
-  </a>
-
-  <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">
-    <span aria-hidden="true"></span>
-    <span aria-hidden="true"></span>
-    <span aria-hidden="true"></span>
-  </button>
-
-  <nav class="nav-links" id="navLinks" aria-label="Primary">
-    <a href="#work">Work</a>
-    
-    <a href="#about">About</a>
-    <a href="#contact" class="nav-cta">Contact</a>
-  </nav>
-</header>
-
-<main id="top">
-
-  <!-- ============ HERO ============ -->
-  <section class="hero" aria-label="Introduction">
-    <div class="wrap hero-inner">
-      <p class="eyebrow">Wilfredo Laboy · DevOps / Systems Engineer</p>
-      <h1>Engineer by day.<br><em class="ember-text">Forge</em> by night.</h1>
-      <p class="lede">DevOps engineer and systems administrator. I keep production systems reliable by day — and build games, add-ons, and tools by night.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#work">See my work</a>
-        <a class="btn btn-ghost" href="#contact">Get in touch</a>
-      </div>
+<div class="wrap">
+  <div class="nav">
+    <div class="logo">WILFREDO<span>.</span>LABOY</div>
+    <div class="navlinks">
+      <a href="#work">WORK</a>
+      <a href="#about">ABOUT</a>
+      <a href="#skills">SKILLS</a>
+      <a href="#contact">CONTACT</a>
     </div>
-  </section>
-
-  <div class="wrap">
-    <figure class="banner">
-      <img src="assets/hero-professional.webp" alt="A calm, minimal workspace with a laptop at dawn" width="2736" height="912" loading="lazy">
-    </figure>
   </div>
 
-  <!-- ============ WORK / HIGHLIGHTS ============ -->
-  <section class="section" id="work">
-    <div class="wrap">
-      <p class="eyebrow">Work</p>
-      <h2>Professional highlights.</h2>
-      <p class="prose">The résumé version — short, verifiable, serious.</p>
-      <div class="cards">
-        <article class="card">
-          <h3>DevOps &amp; Automation</h3>
-          <p>CI/CD pipelines, infrastructure as code, and automation that removes toil instead of adding it.</p>
-        </article>
-        <article class="card">
-          <h3>Systems Administration</h3>
-          <p>Linux servers, networking, and homelab-grade infrastructure — designed, secured, and documented.</p>
-        </article>
-        <article class="card">
-          <h3>Endpoint Management</h3>
-          <p>14+ years of macOS device management at scale: MDM, fleet provisioning, and lifecycle strategy.</p>
-        </article>
-        <article class="card">
-          <h3>Apple Ecosystem</h3>
-          <p>Apple Business Manager integration, device lifecycle planning, and endpoint consulting.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ ABOUT ============ -->
-  <section class="section section-alt" id="about">
-    <div class="wrap">
-      <p class="eyebrow">About</p>
-      <h2>Fourteen-plus years keeping systems running.</h2>
-      <p class="prose">My background is endpoint engineering and systems administration — macOS device management at fleet scale, MDM, and Apple device lifecycle work. These days my focus has shifted toward DevOps and systems administration: automation, Linux infrastructure, and making complex systems boring and reliable. I bring an operator's discipline to everything I build, including games.</p>
-      <p class="note">Currently contracting — details available on request. This page stays employer-agnostic on purpose.</p>
-    </div>
-  </section>
-
-  <!-- ============ THE FORGE CURRENT (bridge panel) ============ -->
-  <section class="section" aria-label="The Forge current">
-    <div class="wrap">
-      <div class="flash">
-        <h2>The <span class="ember-text">Forge</span> current</h2>
-        <p>Indie game dev, WoW add-ons, and creator tools — Forge's Ledger, Meadow Bound, and everything in the works, built with my crew at our studio. The split lives across the two domains now, not inside this page.</p>
-        <a class="btn btn-ember" href="https://thecrescentcove.com">Enter the Cove <span aria-hidden="true">→</span></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ CONTACT ============ -->
-  <section class="section contact" id="contact">
-    <div class="wrap contact-grid">
-      <div>
-        <p class="eyebrow">Contact</p>
-        <h2>Send a raven.</h2>
-        <p class="prose">Consulting, collaboration, or just talking shop about games and infrastructure — my inbox is open.</p>
-        <a class="email-link" href="mailto:info@wilfredolaboy.com">info@wilfredolaboy.com</a>
-        <div class="socials">
-          <a href="https://www.youtube.com/@RoninForge-pro" target="_blank" rel="noopener">YouTube</a>
-          <a href="https://github.com/Onepromise" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://www.linkedin.com/in/wilfredo-laboy-07320650" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://instagram.com/roninforge_" target="_blank" rel="noopener">Instagram</a>
-        </div>
-      </div>
-      
-    </div>
-  </section>
-
-</main>
-
-<footer class="footer">
-  <div class="wrap footer-inner">
-    <p>© <span id="year">2026</span> Wilfredo Laboy</p>
-    <p class="footer-sub">Two currents · one forge · <a href="https://thecrescentcove.com">Forge at Crescent Cove →</a></p>
+  <div class="hero">
+    <div class="kicker">Infrastructure · Security · Identity</div>
+    <h1>Wilfredo Laboy<br><span class="thin">builds systems that hold.</span></h1>
+    <div class="role">Head of Infrastructure &amp; Security <span class="at">at Hyper Nimbus</span></div>
+    <div class="role-meta">Contract role · July 2026 to present · Remote</div>
+    <p class="lede">Systems Engineer: cloud infrastructure, security and identity for AI products. Wilfredo Laboy builds and secures the cloud foundations behind AI products, working across AWS infrastructure, identity and access, CI/CD and compliance. He has helped take products from prototype to public launch for clients in government, e-commerce, financial services and hospitality.</p>
+    <div class="cta"><a class="btn" href="#contact">Get in touch</a><a class="btn ghost" href="#work">See the work</a></div>
   </div>
-</footer>
 
-<script src="script.js"></script>
+  <section id="about">
+    <h2>About</h2>
+    <div class="prose">
+      <p>Since July 2026, Wilfredo has been a contract Systems Engineer at Hyper Nimbus, an AI company. He was brought in for infrastructure, security, CI/CD and identity on a government digital-services platform. His role soon grew to cover several products on shared AWS infrastructure: an AI assistant for a consumer e-commerce brand, a lead-generation platform for financial-services agents, and Hyper Bricks, an AI workspace that launched publicly in October 2026.</p>
+      <p>His work runs from single sign-on and least-privilege access to production troubleshooting, security reviews, payments integration and compliance policy. He works closely with a distributed engineering team, and much of his day-to-day work is done alongside AI coding agents. He believes in checking the real state of a system before changing it, and in giving everyone, himself included, only the access they need.</p>
+    </div>
+  </section>
+
+  <section id="work">
+    <h2>Selected work</h2>
+    <div class="cards">
+      <div class="card">
+        <span class="when">October 2026</span>
+        <h3>Hyper Bricks launch</h3>
+        <ul>
+          <li>Helped launch Hyper Bricks, an AI workspace built from modular "bricks", to the public.</li>
+          <li>Built a secure Stripe webhook receiver for subscriptions. It verifies every signature and never logs customer payment details.</li>
+          <li>Before launch, audited the product for any client data in public areas. Found and fixed an issue in the public web bundle the same day it was found.</li>
+          <li>Reviewed sign-in and access changes ahead of the launch.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Identity and access</h3>
+        <ul>
+          <li>Designed and built single sign-on, with automatic user provisioning, from Google Workspace to AWS IAM Identity Center.</li>
+          <li>Set up role-based groups and scoped admin roles in place of blanket super-admin access.</li>
+          <li>Required multi-factor authentication on every human cloud-console account, enforced through policy as code.</li>
+          <li>Keeps an inventory of every credential (owner, storage, expiry and rotation, never the values). Runs regular access reviews and cleans up unused high-privilege access.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Security engineering</h3>
+        <ul>
+          <li>Reviews code and infrastructure changes for security and privacy, including third-party integrations, SAML login, OAuth scopes and data retention.</li>
+          <li>Ran a dependency-vulnerability cleanup across release branches and added a CI check that blocks high and critical advisories.</li>
+          <li>Found that Kubernetes network policies were not being enforced and wrote the rollout plan to fix it.</li>
+          <li>Leads incident investigations: log analysis, root cause, written reports and follow-up actions.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Compliance and policy</h3>
+        <ul>
+          <li>Wrote the company's Data Retention &amp; Disposal Policy and checked it against the actual code and cloud configuration.</li>
+          <li>Supports SOC 2 readiness, including the access-control evidence and a list of gaps to fix.</li>
+          <li>Works on Google OAuth restricted-scope verification and the related security assessment.</li>
+          <li>Owns the product Terms of Service updates and contributes to the privacy policy and subprocessor list.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Platform and operations</h3>
+        <ul>
+          <li>Supports production on AWS (EKS, load balancers, VPC networking) across several product lines.</li>
+          <li>Diagnoses production problems, from memory leaks to expired tokens, and gets them to the right owner.</li>
+          <li>Fixes CI/CD pipelines and sets up safe rollbacks before deployments.</li>
+          <li>Sets up partner integrations with hospitality and payments platforms.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill"><h3>Cloud</h3><p>AWS (IAM, IAM Identity Center, EKS, VPC, ALB, Lambda, Secrets Manager, SES, CloudTrail), Kubernetes, Terraform</p></div>
+      <div class="skill"><h3>Identity</h3><p>SSO (SAML), SCIM, Google Workspace administration, OAuth, Cognito, MFA, least-privilege design</p></div>
+      <div class="skill"><h3>Security and compliance</h3><p>Security code review, incident response, SOC 2, data-retention policy, dependency scanning, secrets management (1Password)</p></div>
+      <div class="skill"><h3>DevOps</h3><p>GitLab CI/CD, merge request review workflows, release management</p></div>
+      <div class="skill"><h3>Development</h3><p>Node.js, TypeScript, React, webhook and API integrations (Stripe)</p></div>
+      <div class="skill"><h3>Ways of working</h3><p>AI-assisted engineering with AI coding agents, remote teams, clear written documentation</p></div>
+    </div>
+  </section>
+
+  <section id="principles">
+    <div class="band">
+      <h2>Working principles</h2>
+      <ol>
+        <li>Check the real state of a system before acting on it.</li>
+        <li>Give everyone, me included, only the access they need.</li>
+        <li>Treat any credential that has been exposed as compromised, and replace it.</li>
+        <li>Prefer reversible, reviewable changes over direct edits to shared systems.</li>
+        <li>Correct my own mistakes openly, where the original was posted.</li>
+      </ol>
+    </div>
+  </section>
+
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="prose">
+      <p>Consulting, collaboration, or just talking shop about infrastructure, security, and identity, my inbox is open.</p>
+      <p><a href="mailto:info@wilfredolaboy.com">info@wilfredolaboy.com</a></p>
+      <p><a href="https://www.linkedin.com/in/wilfredo-laboy-07320650" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/Onepromise" target="_blank" rel="noopener">GitHub</a></p>
+    </div>
+  </section>
+
+  <div class="foot">© 2026 WILFREDO LABOY · ALSO: <a href="https://thecrescentcove.com">FORGE AT CRESCENT COVE, INDIE GAMES &amp; TOOLS →</a></div>
+</div>
+
 </body>
 </html>
